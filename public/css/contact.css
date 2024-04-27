@@ -68,7 +68,22 @@ nav .icon-burger .line {
 .links li a{
     color:black;
 }
-
+.links li a{
+  color:black;
+}
+@media screen and (max-width: 768px) {
+.links li a{
+  color:white;
+}  
+}
+form{
+  margin:145px;
+}
+@media screen and (max-width: 768px) {
+form{
+  margin:0px;
+}  
+}
 @media screen and (max-width: 768px) {
   .links li a{
     color:white;

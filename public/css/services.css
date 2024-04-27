@@ -65,6 +65,22 @@ nav .icon-burger .line {
 	border-radius: 3px;
 	transition: all .3s ease-in-out;
 }
+.links li a{
+    color:black;
+}
+@media screen and (max-width: 768px) {
+  .links li a{
+    color:white;
+}  
+}
+form{
+    margin:145px;
+}
+@media screen and (max-width: 768px) {
+  form{
+    margin:0px;
+}  
+}
 /* .links li a{
     color:white;
 } */

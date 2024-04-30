@@ -157,6 +157,13 @@ section.tab {
         font-size: 35px;
         font-weight: 800;
       }
+	  .box1 {
+		border: 1px solid black;
+		margin-top: 10px;
+		padding: 10px;
+		font-size: 20px;
+		text-align: center;
+	}
 /* ***************************Footer**************************** */
 .footer {
     background-color: black;

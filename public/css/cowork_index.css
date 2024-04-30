@@ -144,6 +144,11 @@ nav .icon-burger .line {
     height: 100vh;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
+  @media screen and (max-width: 768px) {
+    .cards {
+     height: 73em;
+    }
+  }
   .hero h1 {
     text-transform: uppercase;
     color: #1B1117;
@@ -377,7 +382,16 @@ span {
     margin-top: 40px;
     margin-bottom: 40px;
   }
-  
+  @media screen and (max-width: 768px) {
+    .cardmac{
+      height: 64em;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .cardsmac{
+      height: 23em;
+    }
+  }
   .cardsmac {
     max-width: 1200px;
     margin: 0 auto;
@@ -571,7 +585,7 @@ p {
     /* background-color: dodgerblue; */
     color: black;
     padding: 1rem;
-    height: 45rem;
+    height: 47rem;
     border: 1px solid #22B0FC;
   }
   
@@ -608,6 +622,91 @@ p {
     font-weight: 500;
     line-height: 24px;
     font-family: 'Maven Pro', sans-serif;
+}
+/*  */
+#slider{
+  width:80%;
+  margin:0 auto;
+  position:relative;
+  overflow:hidden;
+  box-shadow:2px 5px 10px rgba(0,0,0,0.4);;
+}
+
+.slide{
+  width:100%;
+  
+  display:none;
+  animation-name:fade;
+  animation-duration:1s;
+  
+}
+img{
+ width:100%; 
+}
+@keyframes fade{
+  from{opacity:0.5;}
+  to{opacity:1;}
+}
+
+.controls{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:1.5em;
+  padding:15px 10px;
+  border-radius:5px;
+  
+}
+
+.controls:hover{
+  background:white;
+  transition:0.3s;
+}
+
+.controls:active{
+  color:grey;
+}
+
+#left-arrow{
+  left:10px;
+  background: black;
+  color: white;
+}
+
+#right-arrow{
+  right:10px;
+  background: black;
+  color: white;
+}
+
+#dots-con{
+  
+  text-align:center;
+}
+.dot{
+  display:inline-block;
+  background:grey;
+  padding:8px;
+  border-radius:50%;
+  margin:10px 5px;
+}
+
+.active{
+  background:crimson;
+}
+
+@media (max-width:576px){
+  #slider{width:100%;
+  
+  }
+  
+  .controls{
+    font-size:1em;
+  }
+  
+  #dots-con{
+    display:none;
+  }
 }
   /*  */
 

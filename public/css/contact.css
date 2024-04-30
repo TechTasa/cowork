@@ -142,7 +142,7 @@ form{
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin-bottom: 10rem;
+    /* margin-bottom: 10rem; */
   }
   
   .contact-page h1 {
@@ -173,7 +173,7 @@ form{
     padding: 1rem;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.212);
     width: 18rem;
-    height: 15rem;
+    height: 8rem;
     background: linear-gradient(to left, #0561CA,#00278C);
   }
   
@@ -186,7 +186,7 @@ form{
   }
   .box-cards h2 {
     color:white;
-    font-size: 18px;
+    font-size: 25px;
     margin-bottom: 1rem;
   }
   .box-cards h2 a{

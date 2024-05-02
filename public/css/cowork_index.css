@@ -231,7 +231,7 @@ nav .icon-burger .line {
     border-radius: 50%;
     padding: 20px;
     transition: 0.3s ease-in-out;
-    margin-top: -61%;
+    /* margin-top: -61%; */
 }
 .hero-image2 {
     margin-top: 360px;

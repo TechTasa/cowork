@@ -164,6 +164,27 @@ section.tab {
 		font-size: 20px;
 		text-align: center;
 	}
+	.box2{
+		border: 1px solid black;
+		margin-top: 10px;
+		padding: 10px;
+		font-size: 20px;
+		text-align: center;
+	}
+	.box3 {
+		border: 1px solid black;
+		margin-top: 10px;
+		padding: 10px;
+		font-size: 20px;
+		text-align: center;
+	}
+	.box4 {
+		border: 1px solid black;
+		margin-top: 10px;
+		padding: 10px;
+		font-size: 20px;
+		text-align: center;
+	}
 /* ***************************Footer**************************** */
 .footer {
     background-color: black;

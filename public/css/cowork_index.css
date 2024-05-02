@@ -373,6 +373,45 @@ span {
     font-size: 14px;
     line-height: 20px;
 }
+  /* CSS for styling */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.slide1 {
+    display: none;
+}
+.slide2 {
+  display: none;
+}
+.slide3 {
+  display: none;
+}
+.slide4 {
+  display: none;
+}
+.slide5 {
+  display: none;
+}
+.slide6 {
+  display: none;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
 /*  */
 .cardmac {
     /* background-color: dodgerblue; */
@@ -751,6 +790,11 @@ div.elem-group {
 @media screen and (max-width: 768px) {
   form{
     margin:0px;
+}  
+}
+@media screen and (max-width: 768px) {
+  .container{
+    margin-top: 500px;
 }  
 }
 @media screen and (max-width: 768px) {

@@ -25,3 +25,16 @@
 .slick-arrow {
     display: none !important;
 }
+.slick-slider2 {
+    padding: 0rem 0rem;
+}
+
+.slick-slider2 .element {
+    background-color: #FFF;
+   
+}
+
+.slick-slider2 .slick-disabled {
+    opacity: 0;
+    pointer-events: none;
+}

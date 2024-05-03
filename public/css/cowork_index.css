@@ -212,7 +212,7 @@ nav .icon-burger .line {
     border: 20px solid #22B0FC;
     border-radius: 50%;
     position: absolute;
-    top: 170px;
+    /* top: 170px; */
     margin-left: 30px;
 }
 .hero-image1 {
@@ -228,8 +228,8 @@ nav .icon-burger .line {
     justify-content: end;
 }
 @media screen and (max-width: 768px) {
-  .hero-image1 img  {
-	margin-top: 125%;
+  .container {
+    margin-top: 300px;
 	}
 }
 .hero-image1 img {

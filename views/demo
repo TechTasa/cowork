@@ -1,0 +1,744 @@
+ <div class="cardsmac" style="text-align: center;">
+   
+    <div class="cardmac">
+        <h5 class="h6-color text-lg-start text-md-start text-sm-center text-center">Our benefits</h5>
+        <h2>Our <span>Workspaces</span> That Are Designed With Your Business In Mind</h2>
+        <p>Our workspaces are more Than just desks - they're designed to empower your business and its people. Find the perfect fit for your needs, from collaborative hubs to private offices.</p>
+        <div class="d-flex flex-column banifits">
+            <h6 class="work-active" id="work-fanifits">Separate offices</h6>
+            <main>
+              <article><img src="/cimages/img1.webp" alt=""></article>
+              <article><img src="/cimages/img2.webp" alt=""></article>
+              <article><img src="/cimages/img3.webp" alt=""></article>
+            </main>
+          
+            <h6 class="">Separate Cabins </h6>
+            <main>
+              <article><img src="/cimages/cabin1.webp" alt=""></article>
+              <article><img src="/cimages/cabin2.webp" alt=""></article>
+              <article><img src="/cimages/cabin1.webp" alt=""></article>
+            </main>
+           
+            <h6 class="">Meet Our Professionals</h6>
+            <main>
+              <article><img src="/cimages/bach7.webp" alt=""></article>
+              <article><img src="/cimages/bach9.webp" alt=""></article>
+              <article><img src="/cimages/bach10.webp" alt=""></article>
+            </main>
+          
+     </div>
+    </div>
+  </div>
+  <!--  -->
+ 
+  
+  <!--  -->
+  <div class="cardsmap">
+    <div class="cardmap">
+         <h1 style="text-align:center ;">Come & Find Your<br> Favourite Place</h1>
+    <p style="text-align:center ;">Discover your ideal workspace at Workaholik!** Explore our extensive network of locations and find a space that inspires you. We offer a variety of options to suit your needs, from vibrant co-working spaces to private offices.</p>
+    <!-- <a  href="#" class="hover1">Find More Features</a> -->
+    </div>
+    <div class="cardmap">
+        <h1 style="text-align: center;">BOOK YOUR TRIAL, IT'S FREE.</h1>
+        <form action="reservation.php" method="post">
+            <div class="elem-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+            </div>
+            <div class="elem-group">
+              <label for="email">Your E-mail</label>
+              <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+            </div>
+            <div class="elem-group">
+              <label for="phone">Your Phone</label>
+              <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+            </div>
+            <hr>
+            <div class="elem-group">
+              <label for="message">Anything Else?</label>
+              <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+            </div>
+            <button type="submit">Book A Tour
+            </button>
+          </form>
+    </div>
+  </div>
+ 
+/*  */
+<div class="fiv">
+<h5 class="text-center h6-color">Get Inspired</h5>
+<h2 style="text-align: center; font-size: 40px;">Visualize Your <span class="active-color">Ideal Workspace:</span>Explore <br>Our Gallery</h2>
+<p style="text-align: center;" class="gallery-p">Ready to ditch the cramped office and embrace a space that fuels creativity and productivity? Explore our gallery and discover a variety of inspiring workspaces designed to meet your needs.  See yourself brainstorming in collaborative hubs, focusing in private offices, or networking in modern common areas. Find your perfect fit and unlock a world of possibilities.</p>
+<div class="cardsro">
+    <div class="cardro">
+        <img src="/cimages/bach7.webp" alt="" style="width: 100%;">
+    </div>
+    <div class="cardro">
+        <img src="/cimages/bach9.webp" alt="" style="width: 100%;">
+    </div>
+    <div class="cardro">
+        <img src="/cimages/bach10.webp" alt="" style="width: 100%;">
+    </div>
+</div>
+<div class="cardsro">
+    <div class="cardro">
+        <img src="/cimages/bach7.webp" alt="" style="width: 100%;">
+    </div>
+    <div class="cardro">
+        <img src="/cimages/bach9.webp" alt="" style="width: 100%;">
+    </div>
+    <div class="cardro">
+        <img src="/cimages/bach10.webp" alt="" style="width: 100%;">
+    </div>
+</div>
+</div>
+<!--  -->
+<div class="cardsros">
+<div class="cardros" style="text-align: center;">
+    <h1>Flexible Office Solutions for Large Companies</h1>
+   <p> Empower your team and scale your business with our flexible workspace solutions. We offer a variety of options to suit your needs, from dedicated desks to private offices and meeting rooms. Enjoy the benefits of a collaborative environment without the burden of long-term leases or upfront costs.</p>
+    <a href="contact.html" class="hover2">Book Now</a>
+</div>
+</div>
+<!--  -->
+
+
+
+
+
+
+/* slider */
+<!--Slider-->
+<div id="slider">  
+  <div class="slide">
+    <img src="/cimages/cabin1.webp" >
+  </div>
+  
+  <div class="slide">
+     <img src="/cimages/cabin2.webp" >
+  </div>
+ 
+  <div class="slide">
+    <img src="/cimages/con2.webp" >
+  </div>
+  
+  <div class="slide">
+    <img src="/cimages/con3.webp" >
+  </div>
+  <!-- <div class="slide">
+    <img src="/cimages/con4" >
+  </div>
+  <div class="slide">
+    <img src="/cimages/con5" >
+  </div> -->
+  <!-- <div class="slide">
+    <img src="/cimages/" >
+  </div> -->
+  <!-- <div class="slide">
+    <img src="/cimages/con6.webp" >
+  </div>
+  <div class="slide">
+    <img src="/cimages/cust1.webp" >
+  </div>
+  <div class="slide">
+    <img src="/cimages/cust2.webp" >
+  </div>
+  <div class="slide">
+    <img src="/cimages/cust2.webp" >
+  </div>
+  <div class="slide">
+    <img src="/cimages/cust4.webp" >
+  </div>
+  <div class="slide">
+    <img src="/cimages/ded1.webp" >
+  </div>
+  <div class="slide">
+    <img src="/cimages/ded2.webp" >
+  </div>
+  <div class="slide">
+    <img src="/cimages/hot1.webp" >
+  </div>
+  <div class="slide">
+    <img src="/cimages/hot12.webp" >
+  </div>
+  <div class="slide">
+    <img src="/cimages/img1.webp" >
+  </div>
+  <div class="slide">
+    <img src="/cimages/img2.webp" >
+  </div>
+  <div class="slide">
+    <img src="/cimages/img3.webp" >
+  </div> -->
+    
+  
+  <!--Controlling arrows-->
+  <span class="controls" onclick="prevSlide(-1)" id="left-arrow"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+</span>
+  <span class="controls" id="right-arrow" onclick="nextSlide(1)"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+</span>
+</div>
+  <div id="dots-con">
+ <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+ </div>
+
+  <!--  -->
+  <div class="doct">
+    <h5 class="text-center h6-color">Customers Trust</h5>
+    <h2 style="text-align: center; font-size: 40px;">What <span class="active-color">People say</span> about us</h2>
+    <p style="text-align: center;" class="customers-main-p">At Workaholik, we understand that trust is paramount. That's why we go the extra mile to ensure our customers have a positive and secure workspace experience. We offer transparent pricing, reliable infrastructure, and responsive customer support.  See why businesses of all sizes choose Workaholik for their workspace needs</p>
+  </div>
+  <!--  -->
+  
+
+  <div class="cardsrosw">
+  <div class="cardrosw">
+      <div class="cl">
+          <img src="/cimages/bach.webp" alt="" style="width: 70%;">
+      </div>
+      <div class="dis">
+          <p></p>
+      </div>
+      
+  </div>
+  <div class="cardrosw">
+      <div class="cl">
+          <img src="/cimages/bach7.webp" alt="" style=" width: 70%;">
+      </div>
+      <div class="dis">
+          <p></p>
+      </div>
+      
+  </div>
+</div>
+
+
+/*  */
+<div class="cardsrosws">
+    <div class="cardrosws">
+        <h5 class="h6-color" style="text-align: center;">Faq</h5>
+        <h2 class="text-lg-start text-md-start text-sm-center text-center">Frequently Asked <span class="active-color">Questions</span>
+        </h2>
+        <p class="text-lg-start text-md-start text-sm-center text-center mt-md-3 mt-3">Have questions about Workaholik workspaces? We've got answers! Explore our most frequently asked questions below, and if you can't find what you're looking for, visit our comprehensive FAQ page for even more details..</p>
+        <a class="hover2" href="/html/about.html">More FAQs</a>
+    </div>
+    <div class="cardrosws">
+        <div style="max-width:700px">
+
+            <button class="accordion">What are the benefits of working in a Workaholik co-working space?</button>
+            <div class="panel">
+              <p>
+                Enjoy a variety of benefits at Workaholik! Our co-working spaces foster creativity and productivity.  Network with like-minded professionals, collaborate in modern common areas, and focus in private office spaces. You'll also benefit from:
+                <ul>
+                  <li>Flexible workspace options to suit your needs.</li>
+                  <li>High-speed internet and reliable infrastructure to keep you connected.</li>
+                  <li>Comfortable and professional environment to impress clients and colleagues.</li>
+                </ul>
+              </p>
+            </div>
+          
+            <button class="accordion">What amenities are included in the Workaholik co-working space?</button>
+            <div class="panel">
+              <p>
+                Workaholik provides everything you need for a successful workday. Our amenities include:
+                <ul>
+                  <li>High-speed Wi-Fi to stay connected and productive.</li>
+                  <li>Fully equipped meeting rooms for brainstorming sessions and client pitches.</li>
+                  <li>Comfortable breakout areas to relax and socialize with colleagues.</li>
+                  <li>Printing services and other essential office supplies.</li>
+                  <li>On-site cafe or complimentary coffee to keep you energized throughout the day (depending on location).</li>
+                </ul>
+              </p>
+            </div>
+          
+            <button class="accordion">Are meeting rooms available for booking?</button>
+            <div class="panel">
+              <p>Absolutely! Workaholik offers a variety of meeting rooms to suit your needs.  Our meeting rooms are ideal for presentations, team meetings, or video conferences.  Contact us today to learn more about booking a meeting room for your next gathering.</p>
+            </div>
+          
+            <button class="accordion">What are the operating hours of the Workaholik co-working space?</button>
+            <div class="panel">
+              <p>
+                Workaholik co-working spaces offer extended hours to accommodate your busy schedule.  Our typical operating hours are [insert specific hours here], but some locations may offer 24/7 access.  Please visit our locations page or contact your nearest Workaholik for specific hours.
+              </p>
+            </div>
+          
+          </div>
+          
+    </div>
+  </div>
+
+
+
+  /*  */
+.cardmac {
+    /* background-color: dodgerblue; */
+    color: black;
+    padding: 1rem;
+    height: 100vh;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  @media screen and (max-width: 768px) {
+    .cardmac{
+      height: 64em;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .cardsmac{
+      height: 23em;
+    }
+  }
+  .cardsmac {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .cardmac.workspaces h2 {
+    color: black;
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 51px;
+    font-family: 'Jost', sans-serif;
+}
+.cardmac span {
+    color: #FCBF5B;
+}
+span {
+    font-family: 'Jost', sans-serif;
+}
+.cardmac p {
+    color: black;
+    /* padding: 15px 5px 40px 0px; */
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: 'Maven Pro', sans-serif;
+    margin-bottom: -23px;
+}
+.cardmac h2 {
+    color: black;
+    /* padding: 15px 5px 40px 0px; */
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 50px;
+    font-family: 'Maven Pro', sans-serif;
+}
+.flex-column {
+    flex-direction: column !important;
+}
+.d-flex {
+    display: flex !important;
+}
+.cardmac .banifits h6 {
+    background: #382B33;
+    margin-bottom: -20px;
+    padding: 15px 20px;
+    color: black;
+    cursor: pointer;
+}
+.work-active {
+    background: #FCBF5B !important;
+    color: #1B1117 !important;
+    transition: 0.3s ease-in-out;
+}
+h6 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    font-family: 'Maven Pro', sans-serif;
+}
+.cardmac .banifits h6 {
+    background: #382B33;
+    margin-bottom: -35px;
+    padding: 15px 20px;
+    color: #fff;
+    cursor: pointer;
+}
+main {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+  width: 100%; 
+  display: grid;
+  /* Define Auto Row size */
+  grid-auto-rows: 100px; 
+  /*Define our columns */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+  grid-gap: 1em;
+  margin-top: 40px;
+  height: 30vh;
+}
+
+article {
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+}
+
+/*  */
+.h6-color {
+    color: #22B0FC;
+    /* padding-bottom: 20px; */
+    font-size: 20px;
+    font-weight: 700;
+    /* line-height: 26px; */
+    font-family: 'Maven Pro', sans-serif;
+    /* text-align: center; */
+}
+.text-center {
+    text-align: center !important;
+}
+.container h2 {
+    text-align: center;
+    color: #1B1117;
+    padding-top: 20px;
+    /* padding: 0px 180px; */
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 51px;
+    font-family: 'Jost', sans-serif;
+
+}
+.active-color {
+    color: #FF6A58 !important;
+}
+span {
+    font-family: 'Jost', sans-serif;
+}
+.spaces-p {
+    text-align: center;
+    /* padding: 15px 180px 25px 180px; */
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: 'Maven Pro', sans-serif;
+}
+/*  */
+.cardmacs {
+    /* background-color: dodgerblue; */
+    color: black;
+    padding: 1rem;
+    height: 100vh;
+  }
+  
+  .cardsmacs {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .spaces-card1 {
+    background: #FFF;
+    box-shadow: 0px 24px 33px 0px rgba(34, 176, 252, 0.10);
+    padding: 30px;
+    position: relative;
+    z-index: 3;
+    /* left: -20%; */
+    top: 8%;
+}
+.spaces h3 {
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    color: #1B1117;
+}
+h3 {
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 41px;
+    font-family: 'Jost', sans-serif;
+}
+p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: 'Maven Pro', sans-serif;
+}
+.spaces .price {
+    padding: 25px 0px 30px 0px;
+}
+.spaces .price {
+    padding: 15px 0px;
+}
+@media (min-width: 992px){
+.flex-lg-row {
+    flex-direction: row !important;
+}
+}
+@media (min-width: 768px){
+.flex-md-column {
+    flex-direction: column !important;
+}
+}
+.justify-content-between {
+    justify-content: space-between !important;
+}
+.gap-3 {
+    gap: 1rem !important;
+}
+.flex-column {
+    flex-direction: column !important;
+}
+.d-flex {
+    display: flex !important;
+}
+.spaces .price .d-flex:first-child h6 {
+    color: #FF6A58;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    font-family: 'Maven Pro', sans-serif;
+}
+.fa-regular, .far {
+    font-weight: 400;
+}
+.fa-classic, .fa-regular, .fa-solid, .far, .fas {
+    font-family: "Font Awesome 6 Free";
+}
+/*  */
+.cardmacss {
+    /* background-color: dodgerblue; */
+    color: black;
+    padding: 1rem;
+    height: 47rem;
+    border: 1px solid #22B0FC;
+  }
+  
+  .cardsmacss {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .cardmacss h4 {
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    color: #1B1117;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 31px;
+    font-family: 'Jost', sans-serif;
+}
+.Spaces-card .card-body p {
+    color: #1B1117;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: 'Maven Pro', sans-serif;
+    
+}
+.spaces .price {
+    padding: 25px 0px 30px 0px;
+}
+.spaces .price .d-flex:first-child h6 {
+    color: #FF6A58;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    font-family: 'Maven Pro', sans-serif;
+}
+/*  */
+#slider{
+  width:80%;
+  margin:0 auto;
+  position:relative;
+  overflow:hidden;
+  box-shadow:2px 5px 10px rgba(0,0,0,0.4);;
+}
+
+.slide{
+  width:100%;
+  
+  display:none;
+  animation-name:fade;
+  animation-duration:1s;
+  
+}
+img{
+ width:100%; 
+}
+@keyframes fade{
+  from{opacity:0.5;}
+  to{opacity:1;}
+}
+
+.controls{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:1.5em;
+  padding:15px 10px;
+  border-radius:5px;
+  
+}
+
+.controls:hover{
+  background:white;
+  transition:0.3s;
+}
+
+.controls:active{
+  color:grey;
+}
+
+#left-arrow{
+  left:10px;
+  background: black;
+  color: white;
+}
+
+#right-arrow{
+  right:10px;
+  background: black;
+  color: white;
+}
+
+#dots-con{
+  
+  text-align:center;
+}
+.dot{
+  display:inline-block;
+  background:grey;
+  padding:8px;
+  border-radius:50%;
+  margin:10px 5px;
+}
+
+.active{
+  background:crimson;
+}
+
+@media (max-width:576px){
+  #slider{width:100%;
+  
+  }
+  
+  .controls{
+    font-size:1em;
+  }
+  
+  #dots-con{
+    display:none;
+  }
+}
+  /*  */
+
+  .hover1 {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #FF6A58;
+    color: black;
+    z-index: 1;
+    padding: 10px 35px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+h4 {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 31px;
+    font-family: 'Jost', sans-serif;
+}
+/*  */
+div.elem-group {
+    margin: 20px 0;
+  }
+  
+  div.elem-group.inlined {
+    width: 49%;
+    display: inline-block;
+    float: left;
+    margin-left: 1%;
+  }
+  
+  label {
+    display: block;
+    font-family: 'Nanum Gothic';
+    padding-bottom: 10px;
+    font-size: 1.25em;
+  }
+  form{
+    margin:145px;
+}
+@media screen and (max-width: 768px) {
+  form{
+    margin:0px;
+}  
+}
+@media screen and (max-width: 768px) {
+  .container{
+    margin-top: 500px;
+}  
+}
+@media screen and (max-width: 768px) {
+  .hero-image1 img {
+    margin-top: 100%;
+}
+}
+@media screen and (max-width: 768px) {
+  .hero-image2 img {
+    margin-top: 97px;
+}
+}
+  input, select, textarea {
+    border-radius: 2px;
+    border: 2px solid #777;
+    box-sizing: border-box;
+    font-size: 1.25em;
+    font-family: 'Nanum Gothic';
+    width: 100%;
+    padding: 10px;
+  }
+  
+  div.elem-group.inlined input {
+    width: 95%;
+    display: inline-block;
+  }
+  
+  textarea {
+    height: 250px;
+  }
+  
+  hr {
+    border: 1px dotted #ccc;
+  }
+  
+  button {
+    height: 50px;
+    background: orange;
+    border: none;
+    color: white;
+    font-size: 1.25em;
+    font-family: 'Nanum Gothic';
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    border: 2px solid black;
+  }
+  /*  */
+  .cardmaps {
+    /* background-color: dodgerblue; */
+    border: 1px solid #22B0FC;
+    color: black;
+    padding: 1rem;
+    height: 25rem;
+    text-align: center;
+    font-size: 23px;
+  }
+  
+  .cardsmaps {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }

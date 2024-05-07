@@ -7,35 +7,39 @@ const LeadSchema = new mongoose.Schema({
   },
   email: {
     type: String,
-    required: [true, 'Please provide email']
+    required: [false, 'Please provide email']
   },
   number: {
     type: String,
-    required: [true, 'Please provide number']
+    required: [false, 'Please provide number']
   },
   salary: {
     type: Number,
-    required: [true, 'Please provide salary']
+    required: [false, 'Please provide salary']
   },
   address: {
     type: String,
-    required: [true, 'Please provide address']
+    required: [false, 'Please provide address']
   },
   timeToReach: {
     type: String,
-    required: [true, 'Please provide time for when we can reach you']
+    required: [false, 'Please provide time for when we can reach you']
   },
   reachBy: {
     type: String,
     enum: ['email', 'phone'],
-    required: [true, 'Please provide how we can reach you']
+    required: [false, 'Please provide how we can reach you']
   },
   companyName: {
     type: String,
   },
+  message: {
+    type: String,
+    required:true
+  },
   leadType: {
     type: String,
-    enum: ['creditcard', 'personalloan', 'microloan', 'businessloan', 'homeloan','insurance'],
+    enum: ['creditcard', 'personalloan', 'microloan', 'businessloan', 'homeloan','insurance','cowork'],
     required: [true, 'Please provide type of lead']
   },
   documents: {

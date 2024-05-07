@@ -152,13 +152,14 @@
                   <th scope="col">Name</th>
                   <th scope="col">Email</th>
                   <th scope="col">Number</th>
-                  <th scope="col">Salary</th>
+                  <th scope="col">Message</th>
+                  <!-- <th scope="col">Salary</th>
                   <th scope="col">Address</th>
                   <th scope="col">Time to Reach</th>
-                  <th scope="col">Reach By</th>
-                  <th scope="col">Lead Type</th>
-                  <th scope="col">Date/Time</th>
-                  <th scope="col">Documents</th>
+                  <th scope="col">Reach By</th> -->
+                  <!-- <th scope="col">Lead Type</th> -->
+                  <!-- <th scope="col">Date/Time</th> -->
+                  <!-- <th scope="col">Documents</th> -->
                 </tr>
               </thead>
               <tbody>
@@ -176,6 +177,9 @@
                       <%= lead.number %>
                     </td>
                     <td>
+                      <%= lead.message %>
+                    </td>
+                    <!-- <td>
                       <%= lead.salary %>
                     </td>
                     <td>
@@ -192,13 +196,13 @@
                     </td>
                     <td>
                       <%= lead.createdAt%>
-                    </td>
-                    <td>
+                    </td> -->
+                    <!-- <td>
                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#documentsModal<%= lead._id %>">
                         View Documents
                       </button>
             
-                      <!-- Modal -->
+                     
                       <div class="modal fade" id="documentsModal<%= lead._id %>" tabindex="-1" role="dialog" aria-labelledby="documentsModalLabel<%= lead._id %>" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                           <div class="modal-content">
@@ -209,7 +213,7 @@
                               </button>
                             </div>
                             <div class="modal-body">
-                              <!-- Display the documents here. You might need to adjust this part based on how you're storing and retrieving the documents. -->
+                            
                               <% for (let doc in lead.documents) { %>
                                 <% if (lead.documents[doc]) { %>
                                   <h5><%= doc.charAt(0).toUpperCase() + doc.slice(1) %>:</h5>
@@ -235,7 +239,7 @@
                           </div>
                         </div>
                       </div>
-                    </td>
+                    </td> -->
                   </tr>
                   <% }); %>
               </tbody>

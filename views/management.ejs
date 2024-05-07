@@ -35,11 +35,11 @@
             <div class="collapse navbar-collapse" id="sidebarCollapse">
                 <!-- Navigation -->
                 <ul class="navbar-nav">
-                  <!-- <li class="nav-item">
+                  <li class="nav-item">
                     <a class="nav-link" href="/dashboard/">
                       <i class="bi bi-house"></i> Dashboard
                     </a>
-                  </li> -->
+                  </li>
                   <% if (userType === 'admin' || userType === 'hr') { %>
                     <li class="nav-item">
                         <a class="nav-link" href="/dashboard/management">
@@ -47,11 +47,11 @@
                         </a>
                     </li>
                 <% } %>
-                  <!-- <li class="nav-item">
+                  <li class="nav-item">
                     <a class="nav-link" href="/dashboard/leads">
                       <i class="bi bi-bar-chart"></i> Leads
                     </a>
-                  </li> -->
+                  </li>
                   <% if (userType === 'admin' || userType === 'hr') { %>
                     <li class="nav-item">
                         <a class="nav-link" href="/dashboard/jobs">

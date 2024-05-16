@@ -6,6 +6,23 @@
     <link rel="stylesheet" href="/css/cowork_index.css">
     <title>Document</title>
 </head>
+<style>
+  .cardno {
+  /* background-color: dodgerblue; */
+  /* color: white; */
+  padding: 1rem;
+}
+
+.cardsno {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+</style>
+
 <body>
     <nav>
         <input id="nav-toggle" type="checkbox">
@@ -30,29 +47,6 @@
     <h1 style="text-align: center;">Home page</h1>
     <ul>
         <h2>PRIVATE OFFICE</h2>
-        <div id="slider">  
-            <div class="slides">  
-              <img src="/cimages/img1.webp" style="width: 100%; height: 500px;"  />
-             </div>
-              
-              <div class="slides">  
-              <img src="/cimages/homepage.webp" style="width: 100%; height: 500px;"  />
-            </div>
-              
-              <div class="slides">  
-              <img src="/cimages/img3.webp" style="width: 100%; height: 500px;"  />
-            </div> 
-              
-               <div class="slides">  
-              <img src="/cimages/cabin1.webp" style="width: 100%; height: 500px;"  />
-            </div> 
-              
-            <div class="slides">  
-              <img src="/cimages/cabin2.webp" style="width: 100%; height: 500px;" />
-            </div>  
-              
-              <div id="dot"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-             </div>
         <li>A self-contained office for one or more people. Provides the most privacy and noise control, ideal for focused work or confidential meetings.
         </li>
         <li>For those valuing undisturbed personal space, secure your own corner within a communal setting        </li>
@@ -63,6 +57,40 @@
         <li>Choose from daily to yearly bookings and receive complimentary amenities including high-speed Wi-Fi, hot beverages, printing services, and meeting room access.</li>
        
     </ul>
+        <div class="cardsno">
+          <div class="cardno">
+            <div id="slider">  
+              <div class="slides">  
+                <img src="/cimages/img1.webp" style="width: 100%; height: 300px;"  />
+               </div>
+                
+                <div class="slides">  
+                <img src="/cimages/homepage.webp" style="width: 100%; height: 300px;"  />
+              </div>
+                
+                <div class="slides">  
+                <img src="/cimages/img3.webp" style="width: 100%; height: 300px;"  />
+              </div> 
+                
+                 <div class="slides">  
+                <img src="/cimages/cabin1.webp" style="width: 100%; height: 300px;"  />
+              </div> 
+                
+              <div class="slides">  
+                <img src="/cimages/cabin2.webp" style="width: 100%; height: 300px;" />
+              </div>  
+                
+                <div id="dot"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+               </div>
+          </div>
+          <div class="cardno">
+            <video class="ourvideo" width="100%" controls>
+              <source src="/cimages/private_office.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+    
+     
 </body>
 <footer class="footer">
     <div class="social-icons">

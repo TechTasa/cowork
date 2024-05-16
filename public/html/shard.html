@@ -6,6 +6,22 @@
     <link rel="stylesheet" href="/css/cowork_index.css">
     <title>Document</title>
 </head>
+<style>
+  .cardno {
+  /* background-color: dodgerblue; */
+  /* color: white; */
+  padding: 1rem;
+}
+
+.cardsno {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+</style>
 <body>
     <nav>
         <input id="nav-toggle" type="checkbox">
@@ -30,47 +46,58 @@
     <h1 style="text-align: center;">About Us</h1>
     <ul>
         <h2>About Our Company</h2>
-        <!-- slider -->
-     <div id="slider">  
-        <div class="slides">  
-          <img src="/cimages/img1.webp" style="width: 100%; height: 500px;"  />
-         </div>
-          
-          <div class="slides">  
-          <img src="/cimages/homepage.webp" style="width: 100%; height: 500px;"  />
-        </div>
-          
-          <div class="slides">  
-          <img src="/cimages/img3.webp" style="width: 100%; height: 500px;"  />
-        </div> 
-          
-           <div class="slides">  
-          <img src="/cimages/cabin1.webp" style="width: 100%; height: 500px;"  />
-        </div> 
-          
-        <div class="slides">  
-          <img src="/cimages/cabin2.webp" style="width: 100%; height: 500px;" />
-        </div>  
-          
-          <div id="dot"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-         </div>
         <li>Welcome to Workaholik - Your Premier Co-Working Space Solution
-            At Workaholik, we understand the importance of a conducive workspace for the modern professional. Whether you're a startup entrepreneur, a seasoned business owner, a freelancer, or a corporate team in need of a dynamic meeting environment, we've got you covered Founded on the principle of fostering collaboration, innovation, and productivity, Workaholik offers more than just shared office space. We provide a vibrant community where ideas flourish, connections are made, and goals are achieved.</li>
-   <h4>What sets us apart?</h4>
-   <h4>Flexible Workspace Solutions</h4>
-   <li> From private offices to dedicated desks and hot-desking options, we offer flexible membership plans tailored to suit your needs. Whether you require a quiet space for focused work or a collaborative environment for brainstorming sessions, we have the perfect workspace for you.</li>
-   <h4>Modern Amenities</h4>
-   <li>Our thoughtfully designed workspaces are equipped with state-of-the-art amenities to enhance your productivity and comfort. High-speed internet, ergonomic furniture, meeting rooms equipped with audio-visual facilities, and complimentary refreshments are just a few of the perks you'll enjoy at Workaholik.</li>
-   <h4>Community Engagement</h4>
-   <li>At Workaholik, networking isn't just a buzzword – it's a way of life. Connect with like-minded professionals, share insights, and collaborate on projects through our regular networking events, workshops, and social gatherings. Our diverse community is a melting pot of talent, creativity, and expertise waiting to be tapped into.</li>
-   <h4>Convenient Location</h4>
-   <li>Centrally located in [City Name], our co-working spaces are easily accessible and strategically positioned to meet the needs of today's mobile workforce. Whether you're commuting from downtown or the suburbs, you'll find our locations conveniently situated near public transportation hubs, restaurants, and other essential amenities.</li>
-   <h4>Affordable Pricing</h4>
-   <li>We believe that access to premium workspace should be accessible to all. That's why we offer competitive pricing plans designed to accommodate businesses of all sizes and budgets. Say goodbye to costly overheads and long-term leases – at Workaholik, you only pay for what you need, when you need it.</li>
-   <li>Join the Workaholik community today and experience the future of work firsthand. Whether you're looking for a space to launch your next big idea, host a client meeting, or simply escape the isolation of the home office, we invite you to make Workaholik your home away from home.</li>
-   <li>Transform your workday. Elevate your productivity. Join Workaholik.</li>
+          At Workaholik, we understand the importance of a conducive workspace for the modern professional. Whether you're a startup entrepreneur, a seasoned business owner, a freelancer, or a corporate team in need of a dynamic meeting environment, we've got you covered Founded on the principle of fostering collaboration, innovation, and productivity, Workaholik offers more than just shared office space. We provide a vibrant community where ideas flourish, connections are made, and goals are achieved.</li>
+ <h4>What sets us apart?</h4>
+ <h4>Flexible Workspace Solutions</h4>
+ <li> From private offices to dedicated desks and hot-desking options, we offer flexible membership plans tailored to suit your needs. Whether you require a quiet space for focused work or a collaborative environment for brainstorming sessions, we have the perfect workspace for you.</li>
+ <h4>Modern Amenities</h4>
+ <li>Our thoughtfully designed workspaces are equipped with state-of-the-art amenities to enhance your productivity and comfort. High-speed internet, ergonomic furniture, meeting rooms equipped with audio-visual facilities, and complimentary refreshments are just a few of the perks you'll enjoy at Workaholik.</li>
+ <h4>Community Engagement</h4>
+ <li>At Workaholik, networking isn't just a buzzword – it's a way of life. Connect with like-minded professionals, share insights, and collaborate on projects through our regular networking events, workshops, and social gatherings. Our diverse community is a melting pot of talent, creativity, and expertise waiting to be tapped into.</li>
+ <h4>Convenient Location</h4>
+ <li>Centrally located in [City Name], our co-working spaces are easily accessible and strategically positioned to meet the needs of today's mobile workforce. Whether you're commuting from downtown or the suburbs, you'll find our locations conveniently situated near public transportation hubs, restaurants, and other essential amenities.</li>
+ <h4>Affordable Pricing</h4>
+ <li>We believe that access to premium workspace should be accessible to all. That's why we offer competitive pricing plans designed to accommodate businesses of all sizes and budgets. Say goodbye to costly overheads and long-term leases – at Workaholik, you only pay for what you need, when you need it.</li>
+ <li>Join the Workaholik community today and experience the future of work firsthand. Whether you're looking for a space to launch your next big idea, host a client meeting, or simply escape the isolation of the home office, we invite you to make Workaholik your home away from home.</li>
+ <li>Transform your workday. Elevate your productivity. Join Workaholik.</li>
 
-    </ul>
+  </ul>
+        <!-- slider -->
+        <div class="cardsno">
+          <div class="cardno">
+            <div id="slider">  
+              <div class="slides">  
+                <img src="/cimages/img1.webp" style="width: 100%; height: 250px;"  />
+               </div>
+                
+                <div class="slides">  
+                <img src="/cimages/homepage.webp" style="width: 100%; height: 250px;"  />
+              </div>
+                
+                <div class="slides">  
+                <img src="/cimages/img3.webp" style="width: 100%; height: 250px;"  />
+              </div> 
+                
+                 <div class="slides">  
+                <img src="/cimages/cabin1.webp" style="width: 100%; height: 250px;"  />
+              </div> 
+                
+              <div class="slides">  
+                <img src="/cimages/cabin2.webp" style="width: 100%; height: 250px;" />
+              </div>  
+                
+                <div id="dot"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+               </div>
+          </div>
+          <div class="cardno">
+            <video class="ourvideo" width="100%" controls>
+              <source src="/video/about1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+    
+      
   </body>
 <footer class="footer">
     <div class="social-icons">

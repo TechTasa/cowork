@@ -10,6 +10,22 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
 </head>
+<style>
+  .cardno {
+  /* background-color: dodgerblue; */
+  /* color: white; */
+  padding: 1rem;
+}
+
+.cardsno {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+</style>
 <body>
     <nav>
         <input id="nav-toggle" type="checkbox">
@@ -34,38 +50,51 @@
     <h1 style="text-align: center;">Home page</h1>
     <ul>
       <h2>CABIN</h2>
-      <div id="slider">  
-        <div class="slides">  
-          <img src="/cimages/img1.webp" style="width: 100%; height: 500px;"  />
-         </div>
-          
-          <div class="slides">  
-          <img src="/cimages/homepage.webp" style="width: 100%; height: 500px;"  />
-        </div>
-          
-          <div class="slides">  
-          <img src="/cimages/img3.webp" style="width: 100%; height: 500px;"  />
-        </div> 
-          
-           <div class="slides">  
-          <img src="/cimages/cabin1.webp" style="width: 100%; height: 500px;"  />
-        </div> 
-          
-        <div class="slides">  
-          <img src="/cimages/cabin2.webp" style="width: 100%; height: 500px;" />
-        </div>  
-          
-          <div id="dot"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-         </div>
       <li>Introducing ready-to-use cabins designed for teams of 2 to 9, fostering a conducive workspace to foster innovation and advance your business.
       </li>
-      <li>Individually secured offices featuring lockable compartments, drawers, ample storage, bulletin boards, and writable surfaces. Read More
+      <li>Individually secured offices featuring lockable compartments, drawers, ample storage, bulletin boards, and writable surfaces.
       </li>
         <li>Tailor your space with your company emblem or adjust the arrangement to align with your operational preferences.
         </li>
         <li>Select from monthly or yearly leases and receive complimentary amenities such as fast Wi-Fi, refreshments, printing services, and meeting room access.</li>
      
     </ul>
+    <div class="cardsno">
+      <div class="cardno">
+        <div id="slider">  
+          <div class="slides">  
+            <img src="/cimages/img1.webp" style="width: 100%; height: 300px;"  />
+           </div>
+            
+            <div class="slides">  
+            <img src="/cimages/homepage.webp" style="width: 100%; height: 300px;"  />
+          </div>
+            
+            <div class="slides">  
+            <img src="/cimages/img3.webp" style="width: 100%; height: 300px;"  />
+          </div> 
+            
+             <div class="slides">  
+            <img src="/cimages/cabin1.webp" style="width: 100%; height: 300px;"  />
+          </div> 
+            
+          <div class="slides">  
+            <img src="/cimages/cabin2.webp" style="width: 100%; height: 300px;" />
+          </div>  
+            
+            <div id="dot"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+           </div>
+      </div>
+      <div class="cardno">
+        <video class="ourvideo" width="100%" controls>
+          <source src="/cimages/cabin.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+
+     
+     
 </body>
 <footer class="footer">
     <div class="social-icons">

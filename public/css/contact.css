@@ -215,7 +215,7 @@ form{
   height: 400px;
 }
 .map-location .gmap_iframe {
-  width: 1700px !important;
+  width: 100% !important;
   height: 400px !important;
   border-radius: 10px;
 }

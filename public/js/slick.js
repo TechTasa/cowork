@@ -47,15 +47,3 @@ $(".slick-slider").slick({
       }
     ]
   });
-  
-
-
-  $('.one-time').slick({
-    dots: false,
-    infinite: true,
-    speed: 300,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    slidesToShow: 1,
-    adaptiveHeight: false // Enable adaptive height
-  });

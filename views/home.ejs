@@ -379,7 +379,50 @@
   <h5 class="text-center h6-color">Our Blogs</h5>
   <h2 style="text-align: center; font-size: 40px;">Read And Share <span class="active-color">Insights</span> In <br>Our Blogs</h2>
   <p class="news-p" style="text-align: center;"> Stay inspired and informed with Workaholik's insightful blogs!  We cover a variety of topics relevant to entrepreneurs, remote workers, and businesses of all sizes.  **Discover tips for boosting productivity, explore the benefits of flexible workspaces, and gain valuable insights to help you thrive in today's dynamic work environment.</p>
-  
+  <style>
+    .blog {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 1rem;
+    }
+
+    .card {
+      width: 300px;
+      height: 100%;
+      padding: 0.5rem;
+      background-color: rgb(250, 250, 250);
+      color: black;
+    }
+
+    .card>img {
+      width: 100%;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .blog {
+        justify-content: center;
+      }
+    }
+  </style>
+  <section class="blog">
+
+    <% blogs.forEach(function(blog) { %>
+      <div class="card">
+        <img src="/<%= blog.image %>" alt="<%= blog.title %>">
+        <div class="card-body">
+          <h4>
+            <%= blog.title %>
+          </h4>
+          <a href="/blog/<%= blog._id %>" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+      <% }); %>
+
+
+  </section>
   
   
  
@@ -388,6 +431,42 @@
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
       crossorigin="anonymous"></script>
 </body>
+<style>
+  .map-location {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .map-location .mapouter {
+
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .map-location .gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    width: 100%;
+    height: 400px;
+  }
+
+  .map-location .gmap_iframe {
+    width: 100% !important;
+    height: 400px !important;
+    border-radius: 10px;
+  }
+</style>
+<div class="map-location">
+  <div class="mapouter">
+    <div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+        src="https://maps.google.com/maps?width=700&amp;height=400&amp;hl=en&amp;q=Sohrab Hall&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+    </div>
+  </div>
+</div>
 <footer class="footer">
     <div class="social-icons">
       <a target="https://twitter.com/i/flow/login" href="https://twitter.com/login"><svg

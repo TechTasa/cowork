@@ -15,6 +15,7 @@ const careerRoutes = require('./routes/careerRoutes');
 const resumeRoutes = require('./routes/resumeRoutes');
 const blogRoutes = require('./routes/blogRoutes');
 const blogPageRoutes = require('./routes/blogPageRoutes');
+const Blog = require('./models/Blog');
 
 
 const { connect} = require('./config/db');
@@ -64,9 +65,10 @@ const store = new MongoDBStore({
   app.use('/blog', blogPageRoutes);
 
 
-  app.get('/', (req, res) => {
+  app.get('/', async(req, res) => {
     const loggedin=req.session.user;
-    res.render("home",{loggedin})
+    let blogs = await Blog.find({}, 'title image');
+    res.render("home",{loggedin,blogs})
   })
   
   app.get('/services', (req, res) => {

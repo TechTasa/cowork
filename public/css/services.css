@@ -136,12 +136,56 @@ section.tab {
     width: 100%;
     height: 100%;
   }
-  .left>img,
+  .cardmacssd {
+    color: black;
+    padding: 1rem;
+   
+  }
+  
+  .cardsmacssd {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+  img{
+	width: 100%;
+	height: 100vh;
+  }
+  @media screen and (max-width: 768px) {
+	img{
+		width: 100%;
+		height: 40vh;
+	  }
+  }
+  @media screen and (max-width: 820px) {
+	img{
+		width: 100%;
+		height: 45vh;
+	  }
+  }
+  @media screen and (max-width: 1024px) {
+	img{
+		width: 100%;
+		height: 45vh;
+	  }
+  }
+  
+  /* .left>img,
     .right>img {
-      width: 35%;
+      width: 45%;
+	  height: 90vh;
 
     }
+	@media screen and (max-width: 768px) {
+		.left>img,
+    .right>img {
+      width: 50%;
+	  height: 50vh;
 
+    }
+	  }
     .left,
     .right {
       display: flex;
@@ -150,7 +194,7 @@ section.tab {
       align-items: center;
 
       margin: 2rem 0rem;
-    }
+    } */
     h1.about {
         text-align: center;
         padding: 20px;

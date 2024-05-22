@@ -49,6 +49,11 @@ nav .links a:hover{
 .links li a{
   color:black;
 }
+@media screen and (max-width: 853px) {
+  .links li a{
+    margin-left: 15px;
+  }  
+  }
 @media screen and (max-width: 768px) {
 .links li a{
   color:white;
@@ -262,11 +267,11 @@ nav .icon-burger .line {
     align-items: center;
     justify-content: end;
 }
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .container {
     margin-top: 300px;
 	}
-}
+} */
 @media screen and (min-width: 768px) {
   .container {
     margin-top: 0;
@@ -277,7 +282,7 @@ nav .icon-burger .line {
     border-radius: 50%;
     padding: 20px;
     transition: 0.3s ease-in-out;
-    /* margin-top: -61%; */
+    margin-top: -10%;
 }
 .hero-image2 {
     margin-top: 360px;
@@ -408,6 +413,11 @@ span {
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
+  @media screen and (max-width: 1024px) {
+    .cardsnik {
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    }
+  }
   .cardnik h5 {
     padding: 25px 0px;
     text-transform: uppercase;
@@ -423,10 +433,10 @@ span {
 }
 /* Our benefits */
 .card11 {
-  /* background-color: dodgerblue; */
+
   color: white;
   padding: 1rem;
-  /* height: 4rem; */
+ 
 }
 
 .cards11 {
@@ -436,6 +446,31 @@ span {
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+.carddoms {
+  /* background-color: dodgerblue; */
+  color: black;
+  padding: 1rem;
+  /* height: 52rem; */
+  /* border: 1px solid #22B0FC; */
+}
+
+.cardsdoms {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+ /* @media only screen and (min-device-width: 1024px) {
+  .carddoms h1{
+     font-size: 45px;
+  
+  }
+  .carddoms p{
+    font-size: 20px;
+    line-height: 30px;
+  }
+} */
 .head1 {
   border: 1px solid black;
   text-align: center;

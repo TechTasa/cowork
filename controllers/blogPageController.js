@@ -1,8 +1,10 @@
 const Blog = require('../models/Blog');
 
 exports.blog_index = async function(req, res) {
-    let blogs = await Blog.find({}, 'title image');
+    let blogs = await Blog.find({}, );
     const loggedin=req.session.user;
+   
+    
     res.render('blogPageIndex', { blogs: blogs,loggedin });
 };
 

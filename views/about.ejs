@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Page</title>
+    <link rel="stylesheet" href="/footer.css">
+    <link rel="stylesheet" href="/navbar.css">
+    <style>
+        .about {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #212121;
+            color: #ffffff;
+            line-height: 1.6;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .team-section, .faq-section {
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+
+        .team-section h1, .faq-section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .team-section p, .faq-section p {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            font-size: 16px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .team-member {
+            background: #3B3B3B;
+            border: 1px solid #212121;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        .team-member img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .team-member h2 {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+
+        .team-member p {
+            font-size: 14px;
+            margin: 10px 0 0;
+            line-height: 1.5;
+            text-align: left;
+            padding: 0 5px;
+        }
+
+        .faq-section {
+            padding: 20px;
+        }
+
+        .faq-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .faq-text, .faq-list {
+            flex: 1;
+            margin: 1rem;
+        }
+
+        .faq-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .faq-text p {
+            margin-bottom: 2rem;
+            text-align: left;
+
+        }
+
+        .faq-text button {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .faq-list {
+            margin-left: 0;
+        }
+
+        .faq-item {
+            background-color: #333;
+            margin-bottom: 0.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-item-header {
+            padding: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-item-header h3 {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .faq-item-header.active h3 {
+            color: #f4af1b;
+        }
+
+        .faq-item-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: #444;
+        }
+
+        .faq-item-content p {
+            padding: 1rem;
+            margin: 0;
+        }
+
+        .faq-item-header.active + .faq-item-content {
+            max-height: 200px;
+        }
+
+        .icon {
+            font-size: 1.5rem;
+        }
+
+        .icon.open {
+            transform: rotate(45deg);
+        }
+
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            .faq-container {
+                flex-direction: column;
+            }
+            .faq-text, .faq-list {
+                flex: none;
+                width: 100%;
+            }
+            .faq-text h2 {
+                font-size: 1.5rem;
+            }
+            .faq-text p {
+                font-size: 0.9rem;
+            }
+            .faq-text button {
+                font-size: 0.9rem;
+            }
+            .faq-item-header h3 {
+                font-size: 0.9rem;
+            }
+            .icon {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">
+       <a href="/"> <img src="/worklogow.png" alt="" style="width: 100px;"></a>
+    </div>
+    <div class="navbar-center">
+        <ul class="navbar-menu" id="navbar-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/career">Career</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/technology">Property</a></li>
+            <li><a href="/projects">Offices</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <% if (loggedin) { %>
+              <li class="navbar-nav-list-links butt"><a href="/dashboard" class="linkss blue">Dashboard</a></li>
+              <li class="navbar-nav-list-links butt "><a href="/auth/logout" class="linkss red">Logout</a></li>
+          <% } else { %>
+            <li class="navbar-nav-list-links butt"><a href="/auth/login" class="linkss blue">Login</a></li>
+          <% } %>
+        </ul>
+    </div>
+    <div class="navbar-contact" id="navbar-contact">
+        <a href="tel:+18001234567">+91-7307918918</a>
+    </div>
+    <div class="navbar-toggle" id="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+    <section class="about">
+    <div class="team-section">
+        <!-- <h1>About US</h1> -->
+        <h1>The Team</h1>
+        <p>Meet the people behind Rental. Our team is committed to providing you with exceptional service and ensuring your office rental experience is a breeze.</p>
+        <div class="team-grid">
+
+            <div class="team-member">
+                <img src="images/p3.jfif" alt="David Lee">
+                <h2>Arbaz Shaikh</h2>
+                <p>Sales and Marketing Director</p>
+                <p>His creative marketing strategies and excellent sales acumen help us connect with businesses in need of office solutions.</p>
+            </div>
+            <div class="team-member">
+                <img src="images/p2.jfif" alt="Sarah Johnson">
+                <h2>Ruchi Jaiswal</h2>
+                <p>Operations Manager</p>
+                <p>With her strong organizational skills and dedication to customer satisfaction, she ensures that every client's needs are met.</p>
+            </div>
+            <div class="team-member">
+                <img src="images/p4.jfif" alt="Emily Davis">
+                <h2>Nikita Biradar</h2>
+                <p>Customer Relations Specialist</p>
+                <p>She provides top-notch customer support, ensuring that all your questions are answered promptly and your issues are resolved.</p>
+            </div>
+            <div class="team-member">
+                <img src="images/p5.jfif" alt="Michael Robinson">
+                <h2>Umair Farooq</h2>
+                <p>Design and Facilities Manager</p>
+                <p>His keen eye for aesthetics and functionality ensures that our workspaces are inviting and conducive to productivity.</p>
+            </div>
+            
+            <div class="team-member">
+                <img src="images/p1.jfif" alt="John Smith">
+                <h2>Mohammad Tasaduq Khan</h2>
+                <p>Founder and CEO</p>
+                <p>With over 15 years of experience in real estate and office solutions, John's passion drives the company's success.</p>
+            </div>   
+            <div class="team-member">
+                <img src="images/p6.jfif" alt="Linda Martinez">
+                <h2>Linda Martinez</h2>
+                <p>Finance and Administration Coordinator</p>
+                <p>She manages all financial aspects with precision and ensures that billing, invoicing, and administrative tasks are handled efficiently.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="team-section">
+        <h1>About US</h1>
+        <p>At Workaholik, we understand the importance of a conducive workspace for the modern professional. Whether you're a startup entrepreneur, a seasoned business owner, a freelancer, or a corporate team in need of a dynamic meeting environment, we've got you covered. Arbaz Founded on the principle of fostering collaboration, innovation, and productivity, Workaholik offers more than just shared office space. We provide a vibrant community where ideas flourish, connections are made, and goals are achieved.</p>
+        <div class="team-grid">
+            <div class="team-member">
+                <h2>Our Vision</h2>
+                <p>We envision a world where everyone has access to a flexible and supportive work environment. We strive to be the leading co-working space provider known for our innovative solutions, exceptional community, and commitment to our members' success.</p>
+            </div>
+            <div class="team-member">
+                <h2>Our Mission</h2>
+                <p>Our mission at Workaholik is to create an inspiring workspace where individuals and teams can thrive. We aim to provide an environment that fosters creativity, collaboration, and productivity, enabling our members to achieve their professional and personal goals.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="team-section">
+        <h1>Why Choose Us?</h1>
+        <div class="team-grid">
+            <div class="team-member">
+                <h2>Flexible Workspace Solutions</h2>
+                <p>We offer a variety of membership plans, including private offices, dedicated desks, and hot-desking options. Whether you need a quiet space for focused work or a collaborative environment for brainstorming, we have the perfect workspace for you.</p>
+            </div>
+            <div class="team-member">
+                <h2>Modern Amenities</h2>
+                <p>Our workspaces are equipped with high-speed internet, ergonomic furniture, meeting rooms with audio-visual facilities, and complimentary refreshments. Everything is designed to enhance your productivity and comfort.</p>
+            </div>
+            <div class="team-member">
+                <h2>Community Engagement</h2>
+                <p>Networking is at the heart of Workaholik. Connect with like-minded professionals, share insights, and collaborate on projects through our regular networking events, workshops, and social gatherings. Our community is a melting pot of talent, creativity, and expertise.</p>
+            </div>
+            <div class="team-member">
+                <h2>Convenient Location</h2>
+                <p>Located in the heart of [City Name], our co-working spaces are easily accessible and strategically positioned near public transportation, restaurants, and other essential amenities.</p>
+            </div>
+            <div class="team-member">
+                <h2>Affordable Pricing</h2>
+                <p>We offer competitive pricing plans to accommodate businesses of all sizes and budgets. Say goodbye to costly overheads and long-term leases – at Workaholik, you only pay for what you need, when you need it.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-section">
+        <div class="faq-container">
+            <div class="faq-text">
+                <h2>Have a question about renting office space?</h2>
+                <p>Can't seem to find the answer to your question? Get in touch with us!</p>
+                <button>Talk to an expert</button>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-item-header">
+                        <h3>What are the benefits of working in a Workaholik co-working space?</h3>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-item-content">
+                        <p>A virtual office space gives your company the use of an address in a professional building in the exact area that will represent your company best.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-item-header">
+                        <h3>What amenities are included in the Workaholik co-working space?</h3>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-item-content">
+                        <p>Content goes here...</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-item-header">
+                        <h3>Are meeting rooms available for booking?</h3>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-item-content">
+                        <p>Content goes here...</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-item-header">
+                        <h3>What are the operating hours of the Workaholik co-working space?</h3>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-item-content">
+                        <p>Content goes here...</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-item-header">
+                        <h3>What is the minimum time for Meeting Space renting?</h3>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-item-content">
+                        <p>Content goes here...</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-item-header">
+                        <h3>What is the maximum time for Meeting Space renting?</h3>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-item-content">
+                        <p>Content goes here...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <script>
+        document.querySelectorAll('.faq-item-header').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+                const content = item.nextElementSibling;
+                if (item.classList.contains('active')) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    item.querySelector('.icon').textContent = '-';
+                } else {
+                    content.style.maxHeight = '0';
+                    item.querySelector('.icon').textContent = '+';
+                }
+            });
+        });
+    </script>
+</body>
+<footer class="footerccc">
+    <div class="footer-containerccc">
+      <div class="footer-sectionccc">
+        <a href="/index.html">
+            <a href="/index.html"><img src="images/worklogow.png" alt="" class="footer-logoccc"></a>
+        </a>
+        <ul>
+            <li style="color: #D89B1C;">+91-7307918918</li>
+            <li style="color: #D89B1C;">info@workaholik.in</li>
+            <li>Near Rubby Hall Metro Station. Sohrab Hall, 5th Floor, Office No.501-530, Near Station, Sangamvadi, Pune, Maharashtra 411001</li>
+          </ul>
+    </div>
+      <div class="footer-sectionccc">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/3aboutus.html">About</a></li>
+          <li><a href="/5searchresult.html">Listings</a></li>
+          <li><a href="/10terms&condition.html">Terms and conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-sectionccc">
+        <h4>Discover</h4>
+        <ul>
+          <li><a href="#">Pune</a></li>
+          <li><a href="#">Mumbai</a></li>
+          <li><a href="#">Kashmir</a></li>
+        </ul>
+      </div>
+      <div class="footer-sectionccc">
+        <h4>Subscribe to our newsletter</h4>
+        <p>Subscribe now to be updated with the latest features</p>
+        <form>
+          <div class="subscribe-container">
+            <input type="email" placeholder="Enter your Email" class="email-input">
+            <button class="subscribe-button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottomccc">
+      <p>&copy; 2024 DESIGN BY TECHTASA</p>
+      <div class="social-iconsccc">
+        <a href="https://www.facebook.com/people/Workaholik/61559107912792/?mibextid=LQQJ4d"><img src="images/fb.png" alt="Facebook"></a>
+        <a href=""><img src="images/IG.png" alt="Instagram"></a>
+        <a href=""><img src="images/tw.png" alt="Twitter"></a>
+      </div>
+    </div>
+  </footer>
+  <script src="/justnavbar/script.js"></script>
+  <script src="/menu.js"></script>
+</html>

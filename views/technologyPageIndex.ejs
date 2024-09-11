@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/2propertypage.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="/css/technology.css">
+    <title>Private Office</title>
+    <style>
+        /* body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        } */
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #444;
+            padding-bottom: 10px;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .price {
+            font-size: 24px;
+            background-color: #ffcc00;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+            
+        }
+
+        .amenities-map {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .amenities {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .amenities h2 {
+            margin-bottom: 10px;
+        }
+
+        .amenities ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .amenities ul li {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            flex: 1 1 calc(33.333% - 10px); /* Three items per row */
+        }
+
+        .amenities ul li i {
+            margin-right: 10px;
+        }
+
+        .map {
+            flex: 1;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        .map iframe {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .main-content {
+                flex-direction: column;
+            }
+
+            .main-image {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .location, .gallery, .services, .amenities-map {
+                flex-direction: column;
+            }
+
+            .gallery img, .service-item {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .map {
+                margin-left: 0;
+            }
+
+            .amenities ul li {
+                flex: 1 1 100%;
+            }
+        }
+
+/* *****************new************* */
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            
+        }
+
+        .image-slider {
+            flex: 1 1 60%;
+            max-width: 600px;
+        }
+
+        .image-slider img {
+            width: 100%;
+            /* border-radius: 10px; */
+            margin-bottom: 10px;
+            height: 50vh;
+        }
+
+        .thumbnail-images {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .thumbnail-images img {
+            width: 32%;
+            /* border-radius: 10px; */
+            height: 25vh;
+        }
+
+        .info {
+            flex: 1 1 40%;
+            max-width: 740px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .details p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .details p i {
+            margin-right: 10px;
+        }
+
+        .description {
+            margin-bottom: 20px;
+            text-align: left;
+            line-height: 1.5;
+        }
+
+        .book{
+            text-align: left;
+        }
+
+        .book-btn {
+            background-color: #ffffff;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .book-btn:hover {
+            background-color: #ffaa00;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image-slider, .info {
+                max-width: 100%;
+            }
+        }
+
+        /* *************************************** */
+        .office{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* ***************************************** */
+
+        .features-wrapper {
+            background-color: #3B3B3B;
+            color: #fff;
+            padding: 40px 20px;
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .features-wrapper h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-cards {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* Five items per row */
+            gap: 20px;
+        }
+
+        .feature-card {
+            background-color: #000000;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .feature-card img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        .feature-card h3 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 900px) {
+            .feature-cards {
+                grid-template-columns: repeat(2, 1fr); /* Two items per row */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .feature-cards {
+                grid-template-columns: 1fr; /* One item per row */
+            }
+
+            .overlay {
+                padding: 20px;
+            }
+
+            .form-group input {
+                flex: 1 1 100%;
+            }
+        }
+        /* *************************************************** */
+        .body7 {
+            background-color: #3B3B3B;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            /* display: flex; */
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            /* text-align: center; */
+        }
+
+        .pricing-container {
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .pricing-container h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: white;
+        }
+
+        .pricing-container p {
+            font-size: 1.2em;
+            color: #bbb;
+            margin: 10px 0 40px;
+        }
+
+        .pricing-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cardprice {
+            background-color: #2e2e2e;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            flex: 1;
+            max-width: 300px;
+            text-align: left;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .cardprice h2 {
+            margin-top: 0;
+        }
+
+        .cardprice .price {
+            font-size: 2em;
+            margin: 10px 0;
+        }
+
+        .cardprice .price span {
+            font-size: 0.5em;
+            color: #000000;
+        }
+
+        .cardprice button {
+            background-color: white;
+            color: #1e1e1e;
+            border: none;
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .cardprice button:hover {
+            background-color: #e6e6e6;
+        }
+
+        .cardprice .secondary {
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+        }
+
+        .cardprice .secondary:hover {
+            background-color: white;
+            color: #1e1e1e;
+        }
+
+        .cardprice h3 {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: white;
+        }
+
+        .cardprice ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cardprice ul li {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .cardprice ul li i {
+            margin-right: 10px;
+            color: #ffcc00;
+        }
+
+        .cardprice:hover {
+            transform: translateY(-10px);
+        }
+
+        .popular .price {
+            background-color: #ffcc00;
+            padding: 10px;
+            border-radius: 5px;
+            color: #1e1e1e;
+        }
+
+        .popular span {
+            background-color: #ffcc00;
+            color: #1e1e1e;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cardprice {
+                max-width: 90%;
+            }
+
+            .pricing-container h1 {
+                font-size: 2em;
+            }
+
+            .pricing-container p {
+                font-size: 1em;
+                margin: 10px 0 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cardprice h2 {
+                font-size: 1.5em;
+            }
+
+            .cardprice .price {
+                font-size: 1.5em;
+            }
+
+            .cardprice button {
+                font-size: 0.9em;
+            }
+
+            .cardprice h3 {
+                font-size: 1em;
+            }
+        }
+
+  /* *************************Hero Section**************************** */
+  /* body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #212121;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        } */
+
+        /* Hero Section Styles */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 70vh;
+            background-image: url('/images/bigoffice.jfif');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay {
+            background-color:#212121;
+            padding: 10px 25px;
+            border-radius: 10px;
+            color: white;
+            max-width: 600px;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .overlay h2 {
+            margin-bottom: 15px;
+            font-size: 1.75rem;
+            text-align: left;
+        }
+
+        .overlay p {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        .form-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            text-align: left;
+        }
+
+        .form-group input {
+            flex: 1 1 calc(50% - 10px);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #3B3B3B;
+            background-color: #3B3B3B;
+            font-size: 1rem;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .form-group input.full-width {
+            flex: 1 1 100%;
+        }
+
+        .submit-container {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .submit-btn {
+            padding: 8px 15px;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .overlay {
+                padding: 20px;
+            }
+
+            .form-group input {
+                flex: 1 1 100%;
+            }
+        }
+        /* ************ */
+        #swiper-wrapper{
+            margin-bottom: 25px;
+
+        }
+    </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">
+       <a href="/"> <img src="/worklogow.png" alt="" style="width: 100px;"></a>
+    </div>
+    <div class="navbar-center">
+        <ul class="navbar-menu" id="navbar-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/career">Career</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/technology">Property</a></li>
+            <li><a href="/projects">Offices</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <% if (loggedin) { %>
+              <li class="navbar-nav-list-links butt"><a href="/dashboard" class="linkss blue">Dashboard</a></li>
+              <li class="navbar-nav-list-links butt "><a href="/auth/logout" class="linkss red">Logout</a></li>
+          <% } else { %>
+            <li class="navbar-nav-list-links butt"><a href="/auth/login" class="linkss blue">Login</a></li>
+          <% } %>
+        </ul>
+    </div>
+    <div class="navbar-contact" id="navbar-contact">
+        <a href="tel:+18001234567">+91-7307918918</a>
+    </div>
+    <div class="navbar-toggle" id="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+   
+        <section class="body1">
+            <div class="container2">
+              <h1>Properties</h1>
+              
+              <% 
+              // Group technologies by type
+              const groupedTechnologies = technologies.reduce((acc, technology) => {
+                  acc[technology.type] = acc[technology.type] || [];
+                  acc[technology.type].push(technology);
+                  return acc;
+              }, {}); 
+              %>
+        
+              <% Object.keys(groupedTechnologies).forEach(type => { %>
+                <h2><%= type %> Development</h2>
+                <div class="grid">
+                  <% groupedTechnologies[type].forEach(function(technology) { %>
+                    <div class="card">
+                      <img src="/<%= technology.image %>" alt="<%= technology.name %>">
+                      <h3><%= technology.name %></h3>
+                      <p><%= technology.shortDescription %> <a href="/technology/<%= technology._id %>">Read More</a></p>
+                    </div>
+                  <% }); %>
+                </div>
+              <% }); %>
+              
+            </div>
+          </section>
+        
+        
+      
+</body>
+<footer class="footerccc">
+    <div class="footer-containerccc">
+      <div class="footer-sectionccc">
+        <a href="/index.html">
+            <a href="/index.html"><img src="images/worklogow.png" alt="" class="footer-logoccc"></a>
+        </a>
+        <ul>
+            <li style="color: #D89B1C;">+91-7307918918</li>
+            <li style="color: #D89B1C;">info@workaholik.in</li>
+            <li>Near Rubby Hall Metro Station. Sohrab Hall, 5th Floor, Office No.501-530, Near Station, Sangamvadi, Pune, Maharashtra 411001</li>
+          </ul>
+    </div>
+      <div class="footer-sectionccc">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/aboutus.html">Home</a></li>
+          <li><a href="/aboutus.html">About</a></li>
+          <li><a href="/ourprojects.html">Listings</a></li>
+          <li><a href="/services.html">Terms and conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-sectionccc">
+        <h4>Discover</h4>
+        <ul>
+          <li><a href="/blogpage.html">Pune</a></li>
+          <li><a href="/career.html">Mumbai</a></li>
+          <li><a href="/contactus.html">Kashmir</a></li>
+        </ul>
+      </div>
+      <div class="footer-sectionccc">
+        <h4>Subscribe to our newsletter</h4>
+        <p>Subscribe now to be updated with the latest features</p>
+        <form>
+          <div class="subscribe-container">
+            <input type="email" placeholder="Enter your Email" class="email-input">
+            <button class="subscribe-button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottomccc">
+      <p>&copy; 2024 DESIGN BY TECHTASA</p>
+      <div class="social-iconsccc">
+        <a href="https://www.facebook.com/people/Workaholik/61559107912792/?mibextid=LQQJ4d"><img src="images/fb.png" alt="Facebook"></a>
+        <a href=""><img src="images/IG.png" alt="Instagram"></a>
+        <a href=""><img src="images/tw.png" alt="Twitter"></a>
+      </div>
+    </div>
+  </footer>
+  <script src="menu.js"></script>
+</html>

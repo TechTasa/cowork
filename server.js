@@ -15,6 +15,11 @@ const careerRoutes = require('./routes/careerRoutes');
 const resumeRoutes = require('./routes/resumeRoutes');
 const blogRoutes = require('./routes/blogRoutes');
 const blogPageRoutes = require('./routes/blogPageRoutes');
+const testimonialRoutes = require('./routes/testimonialRoutes');
+const projectRoutes = require('./routes/projectRoutes');
+const projectPageRoutes = require('./routes/projectPageRoutes');
+const technologyRoutes = require('./routes/technologyRoutes');
+const technologyPageRoutes = require('./routes/technologyPageRoutes');
 const Blog = require('./models/Blog');
 
 
@@ -61,8 +66,13 @@ const store = new MongoDBStore({
   app.use('/dashboard/jobs',jobRoutes);
   app.use('/dashboard/resume', resumeRoutes);
   app.use('/dashboard/blog', blogRoutes);
+  app.use('/dashboard/project', projectRoutes);
+  app.use('/dashboard/technology', technologyRoutes);
   app.use('/career',careerRoutes);
   app.use('/blog', blogPageRoutes);
+  app.use('/projects', projectPageRoutes);
+  app.use('/', testimonialRoutes);
+  app.use('/technology', technologyPageRoutes);
 
 
   app.get('/', async(req, res) => {
@@ -71,6 +81,32 @@ const store = new MongoDBStore({
     res.render("home",{loggedin,blogs})
   })
   
+  app.get('/about', (req, res) => {
+    const loggedin=req.session.user;
+    res.render("about",{loggedin})
+    // res.sendFile(path.join(__dirname, 'public','html', 'services.html'));
+  })
+  // app.get('/testimonials', (req, res) => {
+  //   const loggedin=req.session.user;
+  //   res.render("testimonials",{loggedin})
+  //   // res.sendFile(path.join(__dirname, 'public','html', 'services.html'));
+  // })
+  app.get('/apps', (req, res) => {
+    const loggedin=req.session.user;
+    res.render("apps",{loggedin})
+    // res.sendFile(path.join(__dirname, 'public','html', 'services.html'));
+  })
+  app.get('/projectsold', (req, res) => {
+    const loggedin=req.session.user;
+    res.render("projects",{loggedin})
+    // res.sendFile(path.join(__dirname, 'public','html', 'services.html'));
+  })
+  app.get('/technologyold', (req, res) => {
+    const loggedin=req.session.user;
+    res.render("technology",{loggedin})
+    // res.sendFile(path.join(__dirname, 'public','html', 'services.html'));
+  })
+
   app.get('/services', (req, res) => {
     const loggedin=req.session.user;
     res.render("services",{loggedin})

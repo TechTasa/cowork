@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workaholik Workspace</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+    
+<style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #121212; /* Dark background */
+    color: #f5f5f5; /* Light gray text */
+}
+
+.intro-text-unique {
+    text-align: center;
+    margin: 40px 20px;
+    color: #f5f5f5; /* Light gray text */
+}
+
+.intro-text-unique h1 {
+    color: #ffa500; /* Yellow-orange */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.intro-text-unique .highlight-unique {
+    color: #ffffff; /* White color */
+}
+
+.intro-text-unique p {
+    font-size: 1.2em;
+    color: #f5f5f5; /* Light gray text */
+    max-width: 800px;
+    margin: 0 auto 60px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.card-container-unique {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 20px 40px;
+    flex-wrap: wrap;
+}
+
+.card-unique {
+    border: 1px solid #ffa500; /* Yellow-orange border */
+    padding: 20px;
+    width: 45%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+    background-color: #1e1e1e; /* Dark card background */
+}
+
+.card-unique h3 {
+    color: #ffa500; /* Yellow-orange */
+    font-size: 1.7em;
+    margin-bottom: 15px;
+}
+
+.card-unique .price-unique {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #f5f5f5; /* Light gray text */
+}
+
+.card-unique ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #f5f5f5; /* Light gray text */
+}
+
+.card-unique a {
+    color: #ffa500; /* Yellow-orange links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card-unique a:hover {
+    text-decoration: underline;
+}
+
+.slider-unique {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.slides-unique {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-unique img {
+    width: 100%;
+    height: auto;
+}
+
+.slider-controls-unique {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px;
+}
+
+.slider-controls-unique .prev-unique,
+.slider-controls-unique .next-unique {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff; /* White arrows */
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    user-select: none;
+}
+
+@media screen and (max-width: 768px) {
+    .card-unique {
+        width: 100%;
+    }
+    
+    .intro-text-unique h1 {
+        font-size: 2em;
+    }
+    
+    .intro-text-unique p {
+        font-size: 1em;
+        margin-bottom: 40px;
+    }
+}
+
+   </style>
+
+<nav class="navbar">
+  <div class="navbar-logo">
+     <a href="/"> <img src="/worklogow.png" alt="" style="width: 100px;"></a>
+  </div>
+  <div class="navbar-center">
+      <ul class="navbar-menu" id="navbar-menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/career">Career</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/technology">Property</a></li>
+          <li><a href="/projects">Offices</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <% if (loggedin) { %>
+            <li class="navbar-nav-list-links butt"><a href="/dashboard" class="linkss blue">Dashboard</a></li>
+            <li class="navbar-nav-list-links butt "><a href="/auth/logout" class="linkss red">Logout</a></li>
+        <% } else { %>
+          <li class="navbar-nav-list-links butt"><a href="/auth/login" class="linkss blue">Login</a></li>
+        <% } %>
+      </ul>
+  </div>
+  <div class="navbar-contact" id="navbar-contact">
+      <a href="tel:+18001234567">+91-7307918918</a>
+  </div>
+  <div class="navbar-toggle" id="navbar-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+  </div>
+</nav>
+
+
+    <div class="intro-text-unique">
+        <h1>"Discover Your Ideal Workspace with Workaholik: <span class="highlight-unique">Tailored to your mission and Values.</span>"</h1>
+        <p>At Workaholik, we understand that your workspace is more than just a physical location—it's a reflection of your mission and values. That's why we offer customizable workspaces designed to align perfectly with your organization's goals and ethos. Whether you prioritize collaboration, innovation, or flexibility, we have the perfect workspace solution for you. Elevate your work environment with Workaholik today."</p>
+    </div>
+    <section class="card-container-unique">
+        <% projects.forEach(function(project) { %>
+            <div class="card-unique">
+              <div class="slides-unique">
+                <img width="100%" src="/<%= project.image%>" alt="<%= project.title %>">
+              </div>
+                
+                <div class="price-unique">
+                    <h2><%= project.title %></h2>
+                    <p><%= project.shortDescription %></p>
+                    <a target="_blank" href=<%= project.url %>>Read More</a>
+                </div>
+            </div>
+        <% }); %>
+      </section>
+    <script src="menu.js"></script>
+</body>
+<footer class="footerccc">
+    <div class="footer-containerccc">
+      <div class="footer-sectionccc">
+        <a href="/index.html">
+          <a href="/index.html"><img src="images/worklogow.png" alt="" class="footer-logoccc"></a>
+        </a>
+        <ul>
+            <li style="color: #D89B1C;">+91-7307918918</li>
+            <li style="color: #D89B1C;">info@workaholik.in</li>
+            <li>Near Rubby Hall Metro Station. Sohrab Hall, 5th Floor, Office No.501-530, Near Station, Sangamvadi, Pune, Maharashtra 411001</li>
+          </ul>
+    </div>
+      <div class="footer-sectionccc">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/3aboutus.html">About</a></li>
+          <li><a href="/5searchresult.html">Listings</a></li>
+          <li><a href="/10terms&condition.html">Terms and conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-sectionccc">
+        <h4>Discover</h4>
+        <ul>
+          <li><a href="#">Pune</a></li>
+          <li><a href="#">Mumbai</a></li>
+          <li><a href="#">Kashmir</a></li>
+        </ul>
+      </div>
+      <div class="footer-sectionccc">
+        <h4>Subscribe to our newsletter</h4>
+        <p>Subscribe now to be updated with the latest features</p>
+        <form>
+          <div class="subscribe-container">
+            <input type="email" placeholder="Enter your Email" class="email-input">
+            <button class="subscribe-button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottomccc">
+      <p>&copy; 2024 DESIGN BY TECHTASA</p>
+      <div class="social-iconsccc">
+        <a href="https://www.facebook.com/people/Workaholik/61559107912792/?mibextid=LQQJ4d"><img src="images/fb.png" alt="Facebook"></a>
+        <a href=""><img src="images/IG.png" alt="Instagram"></a>
+        <a href=""><img src="images/tw.png" alt="Twitter"></a>
+      </div>
+    </div>
+  </footer>
+</html>

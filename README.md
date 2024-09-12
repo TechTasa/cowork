@@ -1,5 +1,3 @@
-# cowork
-
 # Requirements
  1.Node Js <a href="https://nodejs.org/en/download/current">Download</a><br>
  2.Git <a href="https://git-scm.com/downloads">Download</a><br>
@@ -7,11 +5,11 @@
 
 # Git Setup (First time only)
 ```
-git config --global user.name TechTasa
+git config --global user.name John Doe
 ```
 ```
 
-git config --global user.email teschtasa@gmail.com
+git config --global user.email johndoe@example.com
 ```
 # Installation
  Open Terminal In VSCODE:
@@ -26,17 +24,29 @@ cd cowork
 ## Select Branch
 
 ```
+git switch main
+```
+```
+git switch test
+```
+```
+git switch sell
+```
+```
+git switch inhouse
+```
+## Create Branch
+
+```
 git checkout -b main
 ```
-OR
+
 ```
 git checkout -b test
 ```
-OR
 ```
 git checkout -b sell
 ```
-OR
 ```
 git checkout -b inhouse
 ```
@@ -69,7 +79,6 @@ npm start
 ```
 
 
-## By default it will run on http://localhost:121
 
 ## Making Changes & Pushing to github
 
@@ -82,14 +91,23 @@ git commit -m "changed this & that"
 Change "changed this & that" with the changes you made.For e.g you changed services page : "changed service page"
 
 ```
+git push origin main
+```
+
+```
 git push origin test
 ```
 
-    
+```
+git push origin sell
+```    
+```
+git push origin inhouse
+```
 ## File/Folder Structure
 
 ```
-└── 📁Insurance Tool
+└── 📁rupeexpertNode
     └── 📁config
     └── 📁controllers
     └── 📁middlewares
@@ -137,3 +155,5 @@ git push origin test
         └── services.ejs                 Services Page
         └── signup.ejs
 ```
+
+

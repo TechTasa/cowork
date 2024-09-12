@@ -82,7 +82,7 @@ git commit -m "changed this & that"
 Change "changed this & that" with the changes you made.For e.g you changed services page : "changed service page"
 
 ```
-git push
+git push origin test
 ```
 
     

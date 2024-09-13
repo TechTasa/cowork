@@ -137,6 +137,11 @@ const store = new MongoDBStore({
     res.render("homeloan",{loggedin})
     // res.sendFile(path.join(__dirname, 'public','html', 'services.html'));
   })
+  app.get('/terms&condition', (req, res) => {
+    const loggedin=req.session.user;
+    res.render("terms&condition",{loggedin})
+    // res.sendFile(path.join(__dirname, 'public','html', 'services.html'));
+  })
   app.get('/contact', (req, res) => {
     const loggedin=req.session.user;
     res.render("contact",{loggedin})

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <title>Terms & Conditions / Contact Form</title>|
+    <style>
+        /* General Styles */
+        .making {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #212121;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Main Content Styles */
+        main {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #212121;
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+        }
+
+        ol {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ol > li:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        /* Hero Section Styles */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 70vh;
+            background-image: url('/images/bigoffice.jfif');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay {
+            background-color: #212121;
+            padding: 30px 40px;
+            border-radius: 10px;
+            color: white;
+            max-width: 600px;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .overlay h2 {
+            margin-bottom: 15px;
+            font-size: 1.75rem;
+            text-align: left;
+        }
+
+        .overlay p {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        .form-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            text-align: left;
+        }
+
+        .form-group input {
+            flex: 1 1 calc(50% - 10px);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #3B3B3B;
+            background-color: #3B3B3B;
+            font-size: 1rem;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .form-group input.full-width {
+            flex: 1 1 100%;
+        }
+
+        .submit-container {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .submit-btn {
+            padding: 8px 15px;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .overlay {
+                padding: 20px;
+            }
+
+            .form-group input {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+           <a href="/"> <img src="/worklogow.png" alt="" style="width: 100px;"></a>
+        </div>
+        <div class="navbar-center">
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/career">Career</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/technology">Property</a></li>
+                <li><a href="/projects">Offices</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <% if (loggedin) { %>
+                  <li class="navbar-nav-list-links butt"><a href="/dashboard" class="linkss blue">Dashboard</a></li>
+                  <li class="navbar-nav-list-links butt "><a href="/auth/logout" class="linkss red">Logout</a></li>
+              <% } else { %>
+                <li class="navbar-nav-list-links butt"><a href="/auth/login" class="linkss blue">Login</a></li>
+              <% } %>
+            </ul>
+        </div>
+        <div class="navbar-contact" id="navbar-contact">
+            <a href="tel:+18001234567">+91-xxxx-xx-xxxx</a>
+        </div>
+        <div class="navbar-toggle" id="navbar-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <section class="making">
+    <main>
+        <h1>Terms & Conditions</h1>
+        <section>
+            <ol>
+                <li>
+                    <h2>1. ipsum, dolor sit amet consectetur adipisicing</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora reiciendis dicta, omnis quis, fugit possimus quasi incidunt enim deserunt explicabo sint rerum cupiditate nihil sit ab odio, obcaecati rem quia!</p>
+                    <p><strong>lorem NOTE:</strong> We reserve the right, at our sole discretion, to change, modify or otherwise alter these terms and conditions at any time. These changes/conditions periodically will become effective immediately. Please review these terms and conditions and maintain your continued use of the site following the posting of changes and/or modifications will constitute your acceptance of the revised Terms and Conditions and the reasonableness of these standards for notice of changes. For your information, this page was last updated as of the date at the top of these terms and conditions.</p>
+                </li>
+                <li>
+                    <h2>2. ipsum, dolor sit amet consectetur adipisicing</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora reiciendis dicta, omnis quis, fugit possimus quasi incidunt enim deserunt explicabo sint rerum cupiditate nihil sit ab odio, obcaecati rem quia!</p>
+                </li>
+                <li>
+                    <h2>3. ipsum, dolor sit amet consectetur adipisicing</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora reiciendis dicta, omnis quis, fugit possimus quasi incidunt enim deserunt explicabo sint rerum cupiditate nihil sit ab odio, obcaecati rem quia!</p>
+                </li>
+                <li>
+                    <h2>4. ipsum, dolor sit amet consectetur adipisicing</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora reiciendis dicta, omnis quis, fugit possimus quasi incidunt enim deserunt explicabo sint rerum cupiditate nihil sit ab odio, obcaecati rem quia!</p>
+                </li>
+                <li>
+                    <h2>5. ipsum, dolor sit amet consectetur adipisicing</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora reiciendis dicta, omnis quis, fugit possimus quasi incidunt enim deserunt explicabo sint rerum cupiditate nihil sit ab odio, obcaecati rem quia!</p>
+                </li>
+                <li>
+                    <h2>6. ipsum, dolor sit amet consectetur adipisicing</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora reiciendis dicta, omnis quis, fugit possimus quasi incidunt enim deserunt explicabo sint rerum cupiditate nihil sit ab odio, obcaecati rem quia!</p>
+                </li>
+                <li>
+                    <h2>7. ipsum, dolor sit amet consectetur adipisicing</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora reiciendis dicta, omnis quis, fugit possimus quasi incidunt enim deserunt explicabo sint rerum cupiditate nihil sit ab odio, obcaecati rem quia!
+                        <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ratione distinctio odio, quaerat error necessitatibus amet placeat veritatis dolor eligendi hic itaque consectetur repudiandae eaque ducimus quia similique, fuga molestias.</p>
+                </li>
+                <li>
+                    <h2>8. ipsum, dolor sit amet consectetur adipisicing</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora reiciendis dicta, omnis quis, fugit possimus quasi incidunt enim deserunt explicabo sint rerum cupiditate nihil sit ab odio, obcaecati rem quia!</p>
+                </li>
+                <li>
+                    <h2>9. ipsum, dolor sit amet consectetur adipisicing</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora reiciendis dicta, omnis quis, fugit possimus quasi incidunt enim deserunt explicabo sint rerum cupiditate nihil sit ab odio, obcaecati rem quia!</p>
+                </li>
+                <li>
+                    <h2>10. ipsum, dolor sit amet consectetur adipisicing</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora reiciendis dicta, omnis quis, fugit possimus quasi incidunt enim deserunt explicabo sint rerum cupiditate nihil sit ab odio, obcaecati rem quia!
+                        <br>generator.lorem-ipsum.info <br>
+                        lorem <br>
+                        contact@lorem-ipsum.info
+                    </p>
+                </li>
+                <li>
+                    <h2>11. ipsum, dolor sit amet consectetur adipisicing</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptatem quisquam nesciunt dolore vel quod ea et, qui nisi at. Ullam tempore debitis, fugit omnis blanditiis maiores quibusdam praesentium voluptas.</p>
+                </li>
+                <li>
+                    <h2>12. ipsum, dolor sit amet consectetur adipisicing</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, maiores! Quas reprehenderit dicta quidem alias dolor ipsa tenetur totam aliquam vitae voluptate unde, qui commodi, ipsum sit a ab magnam.</p>
+                </li>
+                <li>
+                    <h2></h2>
+                    <p></p>
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <div class="hero-section">
+        <div class="overlay">
+            <h2>ipsum, dolor sit amet consectetur</h2>
+            <p>ipsum, dolor sit amet consectetur adipisicing</p>
+            <div class="form-group">
+                <input type="text" placeholder="lorem" required>
+                <input type="text" placeholder="lorem" required>
+                <input type="text" placeholder="lorem" required>
+                <input type="email" placeholder="lorem" required>
+                <input type="text" placeholder="lorem" required>
+                <input type="text" placeholder="lorem" required>
+            </div>
+            <div class="submit-container">
+                <a href="/11pagenotfound.html"><button class="submit-btn">button</button></a>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+<script src="menu.js"></script>
+<footer class="footerccc">
+    <div class="footer-containerccc">
+      <div class="footer-sectionccc">
+        <a href="/index.html">
+            <a href="/index.html"><img src="images/worklogow.png" alt="" class="footer-logoccc"></a>
+        </a>
+        <ul>
+            <li style="color: #D89B1C;">+91-xxxx-xx-xxxx</li>
+            <li style="color: #D89B1C;">contact@domainname.com</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sit neque at ut aspernatur, architecto dignissimos debitis aperiam aliquid </li>
+          </ul>
+    </div>
+    <div class="footer-sectionccc">
+        <h4>Quick Links</h4>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/terms&condition">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-sectionccc">
+        <h4>Discover</h4>
+        <ul>
+          <li><a href="#">lorem5</a></li>
+          <li><a href="#">lorem6</a></li>
+          <li><a href="#">lorem7</a></li>
+        </ul>
+      </div>
+      <div class="footer-sectionccc">
+        <h4>ipsum dolor sit amet consectetur adipisicing elit</h4>
+        <p>ipsum dolor sit amet consectetur adipisicing elit</p>
+        <form>
+          <div class="subscribe-container">
+            <input type="email" placeholder="ipsum dolor sit amet" class="email-input">
+            <button class="subscribe-button">button</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottomccc">
+      <p>&copy; 2024 DESIGN BY TECHTASA</p>
+      <div class="social-iconsccc">
+        <a href="https://www.facebook.com/people/Workaholik/61559107912792/?mibextid=LQQJ4d"><img src="images/fb.png" alt="Facebook"></a>
+        <a href=""><img src="images/IG.png" alt="Instagram"></a>
+        <a href=""><img src="images/tw.png" alt="Twitter"></a>
+      </div>
+    </div>
+  </footer>
+</html>
